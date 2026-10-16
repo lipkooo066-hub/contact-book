@@ -1,11 +1,7 @@
 def show_menu():
     print("\n=== КНИГА КОНТАКТОВ ===")
-    print("1. Показать список контактов (print_all)")
-    print("2. Показать меню (summary)")
-    print("3. Добавить контакт")
-    print("4. Найти контакт (search)")
-    print("5. Изменить контакт")
-    print("6. Удалить контакт")
-    print("7. Проверить валидацию")
-    print("0. Выйти")
-    return input("Выберите пункт меню: ").strip()
+    print("1. Показать список\n2. Добавить контакт\n3. Найти\n4. Избранное вкл/выкл\n5. Изменить\n6. Удалить\n7. Undo\n8. Redo\n0. Выход")
+    return input("Выбор: ").strip()
+
+def choose_sort_menu():
+    return "phone" if input("Сортировка (1-Имя, 2-Телефон): ").strip() == "2" else "name"
